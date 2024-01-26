@@ -36,7 +36,6 @@ jobs:
         shell: bash
         run: |
           echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          echo ${{ steps.meta.outputs.tags }}
 
       - name: Build and push
         uses: docker/build-push-action@v5
