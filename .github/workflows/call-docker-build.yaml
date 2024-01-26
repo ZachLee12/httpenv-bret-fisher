@@ -36,15 +36,14 @@ jobs:
         shell: bash
         run: |
           echo ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          echo ${{steps.meta.outputs.tags}}
-          echo ${{steps.meta.outputs.labels}}
+          echo ${{ steps.meta.outputs.tags }}
 
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+
 
 
           
