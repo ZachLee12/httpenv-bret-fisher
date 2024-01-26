@@ -26,5 +26,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: new-image-woohooooo
+          tags: ${{secrets.DOCKERHUB_USER}}/new-image-woohooooo
+          
           
